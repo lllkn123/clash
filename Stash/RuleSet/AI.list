@@ -31,6 +31,8 @@ DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,webpubsub.azure.com
+DOMAIN-KEYWORD,chatgpt-async-webps-prod-eastus-
 DOMAIN-KEYWORD,openaicom-api
 
 # > Copilot
