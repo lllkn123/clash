@@ -1,7 +1,7 @@
 # Stash/Clash/Premium/Meta Config Make by Coldvvater
 # TG Channel: https://t.me/Coldvvater_Channel
 # GitHub: https://github.com/Coldvvater
-# Update Date: 2024.05.16
+# Update Date: 2024.06.11
 
 mixed-port: 7890                     # 混合端口，HTTP和SOCKS5用一个端口
 allow-lan: true                      # 允许局域网的连接（共享代理）
@@ -79,7 +79,7 @@ proxy-groups:
  - {name: Mainland, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China_Map.png, <<: *g, proxies: [DIRECT,Proxy,Auto]}
 
 # 人工智能
- - {name: AI, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Bot.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
+ - {name: AI, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/AI.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
 
 # 油管视频
  - {name: YouTube, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/YouTube.png, <<: *g}
@@ -111,8 +111,8 @@ proxy-groups:
 # 电报信息
  - {name: Telegram, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png, <<: *g}
 
-# Twitter(X)
- - {name: Twitter, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Twitter.png, <<: *g}
+# X(Twitter)
+ - {name: X, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/X.png, <<: *g}
 
 # 苹果服务
  - {name: Apple, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Apple_1.png, <<: *g, proxies: [DIRECT, Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others]}
@@ -255,7 +255,7 @@ rules:
   - RULE-SET,streamingmedia-classical,Streaming
   - RULE-SET,telegram-domain,Telegram
   - RULE-SET,github-domain,Global
-  - RULE-SET,twitter-domain,Twitter
+  - RULE-SET,twitter-domain,X
   - RULE-SET,apple-classical,Global
   - RULE-SET,apple-domain,Apple
   - RULE-SET,google-domain,Google
@@ -266,7 +266,7 @@ rules:
   - RULE-SET,google-ip,Google
   - RULE-SET,netflix-ip,NETFLIX
   - RULE-SET,telegram-ip,Telegram
-  - RULE-SET,twitter-ip,Twitter
+  - RULE-SET,twitter-ip,X
   - RULE-SET,cn-domain,Mainland
   - RULE-SET,bilibili-ip,BiliBili
   - RULE-SET,apple-ip,Apple
