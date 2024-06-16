@@ -1,6 +1,9 @@
 name: 彩云天气SVIP
 desc: 彩云天气会员解锁
-#!author= chxm1023
+author: chxm1023
+homepage: "https://github.com/Coldvvater/Mononoke/tree/master/Clash/StashOverride/Crack"
+icon: "https://github.com/Coldvvater/Coldvvater/blob/master/img-folder/colorweather.png?raw=true"
+category: "Coldvvater"
 
 http:
   mitm:
