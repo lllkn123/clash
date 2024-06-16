@@ -210,7 +210,7 @@ rule-providers:
  private-ip: {<<: *i, path: ./ruleset/private-ip.list, url: https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.list}
 
 # 人工智能
- ai-classical: {<<: *c, path: ./ruleset/openai-classical.list, url: https://raw.gitmirror.com/Coldvvater/Mononoke/master/Stash/RuleSet/AI.list}
+ ai-classical: {<<: *c, path: ./ruleset/openai-classical.list, url: https://raw.gitmirror.com/Coldvvater/Mononoke/master/Clash/RuleSet/AI.list}
 
 # 油管视频
  youtube-domain: {<<: *d, path: ./ruleset/youtube-domain.list, url: https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.list}
@@ -263,7 +263,7 @@ rule-providers:
  twitter-ip: {<<: *i, path: ./ruleset/twitter-ip.list, url: https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.list}
 
 # 苹果代理服务
- apple-classical: {<<: *c, path: ./ruleset/apple-domain.list, url: https://raw.gitmirror.com/Coldvvater/Mononoke/master/Stash/RuleSet/AppleProxyService.list}
+ apple-classical: {<<: *c, path: ./ruleset/apple-domain.list, url: https://raw.gitmirror.com/Coldvvater/Mononoke/master/Clash/RuleSet/AppleProxyService.list}
 
 # 苹果服务
  apple-domain: {<<: *d, path: ./ruleset/apple-domain.list, url: https://raw.gitmirror.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.list}
