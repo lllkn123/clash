@@ -25,7 +25,7 @@ global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy �
 
 external-controller: 127.0.0.1:9090  # 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核，API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 external-ui: ui                      # 可以将静态网页资源 (比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui，可以为绝对路径，或者 Clash 工作目录的相对路径
-external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+external-ui-url: 'https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip'
                                      # 自定义外部用户界面下载地址
 
 secret: ""                           # 自定义 API 的访问密钥
@@ -38,7 +38,7 @@ geox-url:
   geoip: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
   geosite: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
   mmdb: 'https://testingcf.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/Country.mmdb'
-  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+  asn: 'https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
                                      # 自定义 GEO 下载地址
 
 profile:
