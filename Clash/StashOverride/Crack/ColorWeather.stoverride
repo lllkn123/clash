@@ -3,22 +3,26 @@ desc: 彩云天气会员解锁
 #!author= chxm1023
 
 http:
-  rewrite:
-    - ^https:\/\/ad\.caiyunapp\.com\/ - reject
-
-  script:
-    - match: ^https:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)
-      name: cytq
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-
   mitm:
     - "*.cyapi.cn"
     - "*.caiyunapp.com"
 
+  script:
+# VIP信息
+    - match: ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|ai\/weather|operation\/homefeatures)|p\/v\d\/(vip_info|user_info|entries|privileges))
+      name: "caiyun_11"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# SVIP地图-48小时预报(方法来源:苍井灰灰)
+    - match: ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images)
+      name: "caiyun_11"
+      type: request
+      timeout: 60
+
 script-providers:
-  cytq:
+  "caiyun_11":
     url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
     interval: 86400
