@@ -1,7 +1,7 @@
 name: 黑料不打烊
 desc: 定时获取最新黑料（NSFW）
 author: Yuheng
-homepage: "https://github.com/Coldvvater/Mononoke/tree/master/Stash/Override/CronScript"
+homepage: "https://github.com/Coldvvater/Mononoke/tree/master/Clash/StashOverride/CronScript"
 icon: "https://github.com/Coldvvater/Coldvvater/blob/master/img-folder/hlbdy.jpg?raw=true"
 category: "Coldvvater"
 
