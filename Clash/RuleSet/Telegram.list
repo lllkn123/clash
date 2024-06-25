@@ -28,7 +28,7 @@ DOMAIN,events-gateway.ncdev.site
 DOMAIN-SUFFIX,walletbot.me
 
 # Nicegram
-DOMAIN-SUFFIX,nicegram.app
+DOMAIN-KEYWORD,nicegram
 
 # iMe
 DOMAIN,api.mixpanel.com
