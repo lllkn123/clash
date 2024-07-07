@@ -1,7 +1,7 @@
 # Clash Config Make by Coldvvater
 # TG Channel: https://t.me/Coldvvater_Channel
 # GitHub: https://github.com/Coldvvater
-# Update Date: 2024.06.16
+# Update Date: 2024.07.07
 
 port: 7890                           # HTTP(S) 代理服务器端口
 socks-port: 7891                     # SOCKS5 代理端口
@@ -35,8 +35,8 @@ geodata-loader: memconservative      # GEO 文件加载模式，standard：标�
 geo-auto-update: true                # 自动更新 GEO
 geo-update-interval: 24              # 更新间隔，单位为小时
 geox-url:
-  geoip: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
-  geosite: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
+  # geoip: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat'
+  # geosite: 'https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat'
   mmdb: 'https://testingcf.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/Country.mmdb'
   asn: 'https://mirror.ghproxy.com/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
                                      # 自定义 GEO 下载地址
@@ -136,7 +136,7 @@ proxy-groups:
  - {name: Mainland, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China_Map.png, <<: *g, proxies: [DIRECT,Proxy,Auto]}
 
 # 人工智能
- - {name: AI, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/AI.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
+ - {name: AI, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
 
 # 油管视频
  - {name: YouTube, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/YouTube.png, <<: *g}
@@ -184,19 +184,19 @@ proxy-groups:
  - {name: Games, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Game.png, <<: *g}
 
 # 香港节点
- - {name: HongKong, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, <<: *u, filter: "港|🇭🇰|HK|(?i)Hong"}
+ - {name: HongKong, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "港|🇭🇰|HK|(?i)Hong"}
 
 # 台湾节点
- - {name: TaiWan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China.png, <<: *u, filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"}
+ - {name: TaiWan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"}
 
 # 狮城节点
- - {name: Singapore, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Singapore.png, <<: *u, filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"}
+ - {name: Singapore, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Singapore.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"}
 
 # 日本节点
- - {name: Japan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Japan.png, <<: *u, filter: "日|🇯🇵|东京|JP|(?i)Japan"}
+ - {name: Japan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Japan.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "日|🇯🇵|东京|JP|(?i)Japan"}
 
 # 美国节点
- - {name: America, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/United_States.png, <<: *u, filter: "美|🇺🇲|US|(?i)States|American"}
+ - {name: America, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/United_States.png, type: url-test, lazy: true, tolerance: 0,<<: *u, filter: "美|🇺🇲|US|(?i)States|American"}
 
 # 其他节点
  - {name: Others, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Airport.png, <<: *u, filter: "^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|狮城|日本|JP|Japan|美国|US|States|American)).*$"}
