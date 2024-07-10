@@ -9,8 +9,9 @@ category: "Coldvvater"
 http:
   mitm:
     - g.cn
-    - "*.google.cn"
-    - "*.google.com.hk"
+    - '*.google.cn'
+    - '*.google.com.hk'
   url-rewrite:
-    - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+    - ^http://g\.cn https://www.google.com transparent
+    - ^https?://www\.google\.cn https://www.google.com 302
     - ^https?:\/\/(www.)?(google)\.com.hk https://www.google.com 302
