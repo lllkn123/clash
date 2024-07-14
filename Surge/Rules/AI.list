@@ -67,7 +67,7 @@ DOMAIN-SUFFIX,grazie.aws.intellij.net
 DOMAIN,imagine.meta.com
 DOMAIN-SUFFIX,meta.ai
 
-# Perplexity
+# > Perplexity
 DOMAIN-SUFFIX,perplexity.ai
 
 # > Groq
