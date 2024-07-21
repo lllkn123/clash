@@ -20,7 +20,7 @@ udp: true                            # 是否允许 UDP 通过代理，默认为
 
 unified-delay: true                  # 开启统一延迟时，会进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异，可选值 true/false
 tcp-concurrent: true                 # TCP 并发，可选值 true/false
-find-process-mode: strict            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
+find-process-mode: always            # 控制是否让 Clash 去匹配进程，always 开启，强制匹配所有进程，strict 默认，由 Clash 判断是否开启，off 不匹配进程，推荐在路由器上使用此模式
 global-client-fingerprint: chrome    # 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint，目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan
 
 external-controller: 127.0.0.1:9090  # 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核，API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
@@ -65,8 +65,8 @@ sniffer:
     - Mijia Cloud
 
 tun:
-  enable: false                      # 启用 tun
-  stack: system                      # tun 模式堆栈,可用值：system/gvisor/mixed
+  enable: true                      # 启用 tun
+  stack: mixed                      # tun 模式堆栈,可用值：system/gvisor/mixed
   dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
     - any:53
   auto-route: true                   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
@@ -118,28 +118,28 @@ proxy-providers:
 proxy-groups: 
 
 # 漏网之鱼
- - {name: Final, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Final.png, <<: *g, proxies: [Proxy,DIRECT]}
+ - {name: 漏网之鱼, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Final.png, <<: *g, proxies: [Proxy,DIRECT]}
 
 # 节点切换
- - {name: Proxy, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Rocket.png, <<: *g, proxies: [Auto,Fallback,HongKong,TaiWan,Singapore,Japan,America,Others]}
+ - {name: 节点切换, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Rocket.png, <<: *g, proxies: [Auto,Fallback,HongKong,TaiWan,Singapore,Japan,America,Others]}
 
 # 自动选择
- - {name: Auto, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Auto.png, type: url-test, lazy: true, <<: *u}
+ - {name: 自动选择, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Auto.png, type: url-test, lazy: true, <<: *u}
 
 # 故障转移
- - {name: Fallback, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Available.png, type: fallback, <<: *u}
+ - {name: 故障转移, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Available.png, type: fallback, <<: *u}
 
 # 国外网站
- - {name: Global, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Global.png, <<: *g}
+ - {name: 国外网站, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Global.png, <<: *g}
 
 # 国内网站
- - {name: Mainland, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China_Map.png, <<: *g, proxies: [DIRECT,Proxy,Auto]}
+ - {name: 国内网站, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China_Map.png, <<: *g, proxies: [DIRECT,Proxy,Auto]}
 
 # 人工智能
  - {name: AI, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
 
 # 油管视频
- - {name: YouTube, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/YouTube.png, <<: *g}
+ - {name: 油管, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/YouTube.png, <<: *g}
 
 # 奈飞影视
  - {name: NETFLIX, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Netflix.png, <<: *g}
@@ -157,49 +157,49 @@ proxy-groups:
  - {name: Spotify, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Spotify.png, <<: *g}
 
 # 网易云音乐
- - {name: NetEaseMusic, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png, <<: *g, proxies: [DIRECT]}
+ - {name: 网易云, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png, <<: *g, proxies: [DIRECT]}
 
 # TikTok
  - {name: TikTok, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/TikTok.png, <<: *g}
 
 # 国际媒体
- - {name: Streaming, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Streaming.png, <<: *g}
+ - {name: 国际媒体, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Streaming.png, <<: *g}
 
 # 电报信息
- - {name: Telegram, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png, <<: *g}
+ - {name: 电报, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png, <<: *g}
 
 # X(Twitter)
- - {name: X, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/X.png, <<: *g}
+ - {name: 推特, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/X.png, <<: *g}
 
 # 苹果服务
- - {name: Apple, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Apple_1.png, <<: *g, proxies: [DIRECT, Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others]}
+ - {name: 苹果, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Apple_1.png, <<: *g, proxies: [DIRECT, Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others]}
 
 # 谷歌服务
- - {name: Google, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Google_Search.png, <<: *g}
+ - {name: 谷歌, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Google_Search.png, <<: *g}
 
 # 微软服务
- - {name: Microsoft, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Windows_11.png, <<: *g}
+ - {name: 微软, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Windows_11.png, <<: *g}
 
 # 游戏平台
- - {name: Games, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Game.png, <<: *g}
+ - {name: 游戏, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Game.png, <<: *g}
 
 # 香港节点
- - {name: HongKong, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "港|🇭🇰|HK|(?i)Hong"}
+ - {name: 香港, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "港|🇭🇰|HK|(?i)Hong"}
 
 # 台湾节点
- - {name: TaiWan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"}
+ - {name: 台湾, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"}
 
 # 狮城节点
- - {name: Singapore, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Singapore.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"}
+ - {name: 新加坡, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Singapore.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"}
 
 # 日本节点
- - {name: Japan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Japan.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "日|🇯🇵|东京|JP|(?i)Japan"}
+ - {name: 日本, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Japan.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "日|🇯🇵|东京|JP|(?i)Japan"}
 
 # 美国节点
- - {name: America, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/United_States.png, type: url-test, lazy: true, tolerance: 0,<<: *u, filter: "美|🇺🇲|US|(?i)States|American"}
+ - {name: 美国, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/United_States.png, type: url-test, lazy: true, tolerance: 0,<<: *u, filter: "美|🇺🇲|US|(?i)States|American"}
 
 # 其他节点
- - {name: Others, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Airport.png, <<: *u, filter: "^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|狮城|日本|JP|Japan|美国|US|States|American)).*$"}
+ - {name: 其他, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Airport.png, <<: *u, filter: "^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|狮城|日本|JP|Japan|美国|US|States|American)).*$"}
 
 # 远程规则集
 rule-providers:
@@ -296,6 +296,8 @@ rules:
   - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN,d.metacubex.one,DIRECT
   - DOMAIN,raw.gitmirror.com,Proxy
+  
+ 
 
   - RULE-SET,private-domain,DIRECT
   - RULE-SET,ai-classical,AI
