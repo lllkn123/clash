@@ -118,28 +118,28 @@ proxy-providers:
 proxy-groups: 
 
 # 漏网之鱼
- - {name: 漏网之鱼, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Final.png, <<: *g, proxies: [Proxy,DIRECT]}
+ - {name: Final, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Final.png, <<: *g, proxies: [Proxy,DIRECT]}
 
 # 节点切换
- - {name: 节点切换, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Rocket.png, <<: *g, proxies: [Auto,Fallback,HongKong,TaiWan,Singapore,Japan,America,Others]}
+ - {name: Proxy, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Rocket.png, <<: *g, proxies: [Auto,Fallback,HongKong,TaiWan,Singapore,Japan,America,Others]}
 
 # 自动选择
- - {name: 自动选择, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Auto.png, type: url-test, lazy: true, <<: *u}
+ - {name: Auto, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Auto.png, type: url-test, lazy: true, <<: *u}
 
 # 故障转移
- - {name: 故障转移, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Available.png, type: fallback, <<: *u}
+ - {name: Fallback, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Available.png, type: fallback, <<: *u}
 
 # 国外网站
- - {name: 国外网站, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Global.png, <<: *g}
+ - {name: Global, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Global.png, <<: *g}
 
 # 国内网站
- - {name: 国内网站, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China_Map.png, <<: *g, proxies: [DIRECT,Proxy,Auto]}
+ - {name: Mainland, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China_Map.png, <<: *g, proxies: [DIRECT,Proxy,Auto]}
 
 # 人工智能
  - {name: AI, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png, <<: *g, proxies: [America,Japan,Singapore,TaiWan,Others]}
 
 # 油管视频
- - {name: 油管, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/YouTube.png, <<: *g}
+ - {name: YouTube, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/YouTube.png, <<: *g}
 
 # 奈飞影视
  - {name: NETFLIX, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Netflix.png, <<: *g}
@@ -157,49 +157,49 @@ proxy-groups:
  - {name: Spotify, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Spotify.png, <<: *g}
 
 # 网易云音乐
- - {name: 网易云, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png, <<: *g, proxies: [DIRECT]}
+ - {name: NetEaseMusic, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png, <<: *g, proxies: [DIRECT]}
 
 # TikTok
  - {name: TikTok, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/TikTok.png, <<: *g}
 
 # 国际媒体
- - {name: 国际媒体, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Streaming.png, <<: *g}
+ - {name: Streaming, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Streaming.png, <<: *g}
 
 # 电报信息
- - {name: 电报, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png, <<: *g}
+ - {name: Telegram, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png, <<: *g}
 
 # X(Twitter)
- - {name: 推特, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/X.png, <<: *g}
+ - {name: X, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/X.png, <<: *g}
 
 # 苹果服务
- - {name: 苹果, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Apple_1.png, <<: *g, proxies: [DIRECT, Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others]}
+ - {name: Apple, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Apple_1.png, <<: *g, proxies: [DIRECT, Proxy, Auto, Fallback, HongKong, TaiWan, Singapore, Japan, America, Others]}
 
 # 谷歌服务
- - {name: 谷歌, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Google_Search.png, <<: *g}
+ - {name: Google, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Google_Search.png, <<: *g}
 
 # 微软服务
- - {name: 微软, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Windows_11.png, <<: *g}
+ - {name: Microsoft, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Windows_11.png, <<: *g}
 
 # 游戏平台
- - {name: 游戏, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Game.png, <<: *g}
+ - {name: Games, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Game.png, <<: *g}
 
 # 香港节点
- - {name: 香港, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "港|🇭🇰|HK|(?i)Hong"}
+ - {name: HongKong, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "港|🇭🇰|HK|(?i)Hong"}
 
 # 台湾节点
- - {name: 台湾, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"}
+ - {name: TaiWan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/China.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"}
 
 # 狮城节点
- - {name: 新加坡, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Singapore.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"}
+ - {name: Singapore, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Singapore.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"}
 
 # 日本节点
- - {name: 日本, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Japan.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "日|🇯🇵|东京|JP|(?i)Japan"}
+ - {name: Japan, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Japan.png, type: url-test, lazy: true, tolerance: 0, <<: *u, filter: "日|🇯🇵|东京|JP|(?i)Japan"}
 
 # 美国节点
- - {name: 美国, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/United_States.png, type: url-test, lazy: true, tolerance: 0,<<: *u, filter: "美|🇺🇲|US|(?i)States|American"}
+ - {name: America, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/United_States.png, type: url-test, lazy: true, tolerance: 0,<<: *u, filter: "美|🇺🇲|US|(?i)States|American"}
 
 # 其他节点
- - {name: 其他, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Airport.png, <<: *u, filter: "^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|狮城|日本|JP|Japan|美国|US|States|American)).*$"}
+ - {name: Others, icon: https://raw.gitmirror.com/Koolson/Qure/master/IconSet/Color/Airport.png, <<: *u, filter: "^((?!香港|HK|Hong Kong|台湾|TW|TaiWan|新加坡|SG|Singapore|狮城|日本|JP|Japan|美国|US|States|American)).*$"}
 
 # 远程规则集
 rule-providers:
@@ -296,8 +296,6 @@ rules:
   - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN,d.metacubex.one,DIRECT
   - DOMAIN,raw.gitmirror.com,Proxy
-  
- 
 
   - RULE-SET,private-domain,DIRECT
   - RULE-SET,ai-classical,AI
