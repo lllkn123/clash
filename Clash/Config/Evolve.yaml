@@ -65,8 +65,8 @@ sniffer:
     - Mijia Cloud
 
 tun:
-  enable: true                      # 启用 tun
-  stack: mixed                      # tun 模式堆栈,可用值：system/gvisor/mixed
+  enable: false                      # 启用 tun
+  stack: system                      # tun 模式堆栈,可用值：system/gvisor/mixed
   dns-hijack:                        # dns 劫持，将匹配到的连接导入内部 dns 模块，不书写协议则为 udp://
     - any:53
   auto-route: true                   # 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡
