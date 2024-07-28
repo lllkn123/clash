@@ -1,40 +1,4 @@
 ##emby规则##
-#喜鹊
-  - DOMAIN-SUFFIX,magpie.bond,DIRECT #cdn线路
-  - DOMAIN-KEYWORD,magpie,🎬 Emby
-#PiliPili Ultra
-  - DOMAIN-KEYWORD,pilipili,🎬 Emby
-#Tank
-  - DOMAIN,a.tiangou.xyz,DIRECT
-#MICU
-  - DOMAIN,tv.micu.hk,DIRECT
-  - DOMAIN,media.micu.hk,🎬 Emby
-#GuGu
-  - DOMAIN,pro.gugu.media,DIRECT
-  - DOMAIN,main.gugu.media,🎬 Emby
-#终点站
-  - DOMAIN-SUFFIX,emby.wtf,🎬 Emby
-#搬服
-  - DOMAIN-SUFFIX,955557.xyz,🎬 Emby
-#Peach
-  - IP-CIDR,193.123.232.141/32,DIRECT #直连推流
-  - IP-CIDR,141.147.166.107/32,🎬 Emby #挂梯推流
-#CC
-  - DOMAIN-SUFFIX,cc.coemn.com,DIRECT
-#MJJ
-  - DOMAIN-SUFFIX,mjjemby.org,🎬 Emby
-  - IP-CIDR,85.239.235.232/32,🎬 Emby
-#好鸭卷毛鼠
-  - DOMAIN,e.niceduck.me,🎬 Emby
-#1111/垃圾影音
-  - DOMAIN,pm.xmsl.org,DIRECT #公费服前端直连
-  - DOMAIN,sbd.loseremby.org,DIRECT #公费服推流—联通4837
-  - DOMAIN,tw.loseremby.org,DIRECT #公费服推流—台湾HiNet
-  - IP-CIDR,61.171.70.126/32,DIRECT #公费服推流—上海-日本
-  - DOMAIN,free.xmsl.org,🎬 Emby #公益服前端
-  - DOMAIN,ushd.xmsl.org,🎬 Emby #公益服推流
-  - DOMAIN-SUFFIX,xmsl.org,🎬 Emby
-  - DOMAIN-SUFFIX,loseremby.org,🎬 Emby
 #MiSaKaF
   - DOMAIN,embyvip.misakaf.org,DIRECT
   - DOMAIN,emby.misakaf.org,🎬 Emby
@@ -42,6 +6,10 @@
   - DOMAIN,stream2.misakaf.org,🎬 Emby
   - DOMAIN,stream3.misakaf.org,🎬 Emby
   - DOMAIN,stream4.misakaf.org,🎬 Emby
+#HXD(Porn)
+  - DOMAIN-SUFFIX,hxd.as174.com,🎬 Emby
+  - DOMAIN,cf.bili.rip,🎬 Emby
+  - DOMAIN-SUFFIX,nvidia.rip,🎬 Emby
 #琴鸟
   - DOMAIN,cdn.lyrebirdemby.com,🎬 Emby
 #Nanflix
@@ -50,10 +18,11 @@
 #纸片人
   - DOMAIN,emby.embyplus.org,🎬 Emby
   - DOMAIN,gd.9521732.xyz,🎬 Emby
-#paul_电报服
-  - DOMAIN-SUFFIX,imetyou.top,🎬 Emby
-#TreeDiagram
-  - DOMAIN,789.123456.al,🎬 Emby
+#Temby
+  - DOMAIN-SUFFIX,temby.285286.xyz,🎬 Emby
+#NMemby
+  - DOMAIN-SUFFIX,film.hovervan.org,🎬 Emby
+  - DOMAIN,film.hovervan.org,🎬 Emby
 
 ##其它##
   - DOMAIN-KEYWORD,steam,DIRECT #steam
@@ -62,6 +31,5 @@
   #- DOMAIN
   #- DOMAIN-SUFFIX
   #DIRECT
-  #Final
   #🐟 漏网之鱼
   #🎬 Emby
